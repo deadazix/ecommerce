@@ -4,10 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import "../src/styles/typography.css";
 import "../src/styles/base.css";
+import Navigation from "./components/navigation/Navigation";
 function App() {
   return (
     <div>
-      <nav>this is navigation</nav>
+      <Navigation/>
       <Routes>
         <Route path="/product-detail/:id" element={<ProductDetail />} />
       </Routes>
