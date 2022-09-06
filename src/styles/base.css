@@ -1,0 +1,19 @@
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary1: blue;
+  --primary2: red;
+  /* --font-family1:'sans'; */
+  --font-weight-default: 400;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: var(--font-weight-default);
+  
+}
