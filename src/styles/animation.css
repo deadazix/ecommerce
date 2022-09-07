@@ -1,0 +1,20 @@
+/* TRANSFORMS */
+@keyframes transformX-positive-0-animation {
+    0%{
+      transform: translate(-100%);
+    }
+    100%{
+      transform: translate(0%);
+    }
+  }
+  @keyframes transformX-negative-100-animation{
+    0%{
+  
+      transform: translate(0%);
+    }
+    100%{
+      transform: translate(-100%);
+    }
+    
+  }
+  /*  */

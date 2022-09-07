@@ -1,5 +1,6 @@
 import React from "react";
 import "../src/styles/animation.css";
+import './styles/utils.css'
 import { Routes, Route } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
 import "../src/styles/typography.css";
