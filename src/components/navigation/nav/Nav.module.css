@@ -1,0 +1,11 @@
+.nav {
+    display: flex;
+    gap: 1rem;
+   position: fixed; 
+   flex-direction: column;
+   background-color: var(--gray5);
+   left: 0;
+   top: 0;
+   bottom: 0;
+   z-index: 3;
+}

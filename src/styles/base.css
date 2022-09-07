@@ -6,17 +6,38 @@
   box-sizing: border-box;
 }
 :root {
-  --primary1: blue;
-  --primary2: red;
+  --primary1: hsl(26, 100%, 55%);
+  --primary2:hsl(25, 100%, 94%);
+  --gray1:hsl(220, 13%, 13%);
+  --gray2:hsl(219, 9%, 45%);
+  --gray3:hsl(220, 14%, 75%);
+  --gray4:hsl(223, 64%, 98%);
+  --gray5:hsl(0, 0%, 100%);
+  --shadow:#000000be;
   /* --font-family1:'sans'; */
-  --font-weight-default: 400;
+  --font-weight1: 400;
+  --font-weight2:700;
+  --font-family1:Kumbh Sans;
 }
+
+
+
+
+
+
+
 html{
   font-size: 62.5%;
-  
+
 }
 body {
-  font-family: sans-serif;
-  font-weight: var(--font-weight-default);
-  
+  font-family: var(--font-family1);
+  font-weight: var(--font-weight1);
+  font-size: 1.6rem;
+  color:var(--gray1)
+}
+
+.test{
+  background-color: red;
+  color: blue;
 }
