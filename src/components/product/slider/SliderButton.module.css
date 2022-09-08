@@ -1,0 +1,18 @@
+.slider__button {
+  position: absolute;
+  top: 50%;
+  background-color: var(--gray4);
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 2rem;
+  border-radius: 50%;
+  opacity: .9;
+}
+.slider__button:hover{
+    opacity: 1;
+}
+.slider__button--next {
+  right: 0;
+}
+.slider__button--previous {
+}

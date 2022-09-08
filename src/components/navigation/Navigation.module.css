@@ -4,14 +4,15 @@
     align-items: center;
     padding: 2rem;
     background-color: var(--gray5);
-    background-color: rgb(241, 163, 163);
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 .navigation-container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    
 }
 

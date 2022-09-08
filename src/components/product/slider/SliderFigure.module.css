@@ -1,0 +1,11 @@
+.slider__fiqure {
+    width: 400%;
+    
+    
+}
+.slider__large-image{
+    width: 25%;
+    aspect-ratio: 1;
+    transition: .3s;
+
+}

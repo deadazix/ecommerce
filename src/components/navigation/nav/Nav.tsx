@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { NavTransform } from "../Navigation";
+import { NavTransformStateType } from "../Navigation";
 import NavLink from "./NavLink";
 import classes from "./Nav.module.css";
 interface NavFace {
   onClose: (isOpen: boolean) => void;
-  navTransformState: NavTransform;
+  navTransformState: NavTransformStateType;
 }
 const Nav: React.FC<NavFace> = (props) => {
   return (

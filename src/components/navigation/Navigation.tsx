@@ -7,12 +7,12 @@ import Nav from "./nav/Nav";
 import classes from "./Navigation.module.css";
 import { CSSTransition } from "react-transition-group";
 import Modal from "../ui/modal/Modal";
-export type NavTransform =
+export type NavTransformStateType =
   | "u-transformX-positive-0"
   | "u-transformX-negative-100";
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [navTransformState, setNavTransformState] = useState<NavTransform>(
+  const [navTransformState, setNavTransformState] = useState<NavTransformStateType>(
     "u-transformX-negative-100"
   );
 // Changing NavState 
@@ -57,4 +57,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default React.memo(Navigation);
