@@ -3,8 +3,13 @@ import classes from "./Detail.module.css";
 import { useSelector } from "react-redux";
 import ProductPrice from "./ProductPrice";
 import { RootState } from "../../../redux/store";
+import CTAButton from "../../ui/CTAButton";
+import minusSvg from "../../../assets/images/icon-minus.svg";
+import plusSvg from "../../../assets/images/icon-plus.svg";
+import ProductDetailForm from "./ProductDetailForm";
 const Detail = () => {
   const productDetail = useSelector((state: RootState) => state.product);
+  const finallPrice = productDetail.price* (100-productDetail.discount)/100
   return (
     <section className={classes.detail}>
       <span className={classes["detail__company"]}>
@@ -15,7 +20,8 @@ const Detail = () => {
         {" "}
         {productDetail.description}{" "}
       </p>
-      <ProductPrice/>
+      <ProductPrice />
+      <ProductDetailForm productPrice={finallPrice} productName={productDetail.header} />
     </section>
   );
 };

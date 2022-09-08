@@ -1,0 +1,26 @@
+
+.counter{
+  background-color: var(--gray4);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+}
+.counter__minus{
+  cursor: pointer;
+
+}
+.counter__plus{
+  cursor: pointer;
+}
+.submit {
+    background-color: var(--primary1);
+    border-radius: 1rem;
+    font-weight: 700;
+    color: var(--gray5);
+    font-size: 1.6rem;
+}
