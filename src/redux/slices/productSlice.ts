@@ -4,19 +4,19 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface ProductInterface {
   images: string[];
   companyName: string;
-  name: string;
+  header: string;
   description: string;
   price: number;
   discount: number;
 }
 const initialState: ProductInterface = {
-  name: "full Limited Edition sneakers",
+  header: "full Limited Edition sneakers",
   description:
-    "this is one of best shoes that exists its and this is just a dummy text",
+    "this is one ofof best shoes that exists its and this is just a dummy textof best shoes that exists its and this is just a dummy text best shoes that exists its and this is just a dummy text",
   companyName: "SNEAKER COMPAN",
   images: "image1,image2,image3,image4".split(","),
-  price: Number((125).toFixed(2)),
-  discount: 5 / 10,
+  price: 250,
+  discount: 50,
 };
 
 export const productSlice = createSlice({
@@ -24,7 +24,7 @@ export const productSlice = createSlice({
   initialState,
   reducers: {
     changeName(state, action: PayloadAction<string>) {
-      state.name = action.payload;
+      state.header = action.payload;
     },
   },
 });
