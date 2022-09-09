@@ -7,12 +7,16 @@ import Nav from "./nav/Nav";
 import classes from "./Navigation.module.css";
 import { CSSTransition } from "react-transition-group";
 import Modal from "../ui/modal/Modal";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 export type NavTransformStateType =
   | "u-transformX-positive-0"
   | "u-transformX-negative-100";
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const cartData = useSelector((state:RootState)=>state.user.cart)
   const [navTransformState, setNavTransformState] = useState<NavTransformStateType>(
+
     "u-transformX-negative-100"
   );
 // Changing NavState 
@@ -34,7 +38,7 @@ const Navigation = () => {
       </div>
 
       <div className={classes["navigation-container"]}>
-        <OrdersLogo />
+        <OrdersLogo orderCount={cartData.length} />
         <Profile />
       </div>
       {/* MODAL */}

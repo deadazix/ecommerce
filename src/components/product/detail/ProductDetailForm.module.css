@@ -1,5 +1,4 @@
-
-.counter{
+.counter {
   background-color: var(--gray4);
   width: 100%;
   display: flex;
@@ -8,19 +7,28 @@
   padding: 2rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
-
 }
-.counter__minus{
+.counter__minus {
   cursor: pointer;
-
 }
-.counter__plus{
+.counter__plus {
   cursor: pointer;
 }
 .submit {
-    background-color: var(--primary1);
-    border-radius: 1rem;
-    font-weight: 700;
-    color: var(--gray5);
-    font-size: 1.6rem;
+  background-color: var(--primary1);
+  border-radius: 1rem;
+  font-weight: 700;
+  color: var(--gray5);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-svg{
+  /* background-color: white; */
+  filter: brightness(500%);
+  margin-right: 1rem;
+  /* background-clip: text; */
+  
+  
 }

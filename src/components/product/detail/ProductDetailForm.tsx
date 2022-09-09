@@ -2,6 +2,7 @@ import classes from "./ProductDetailForm.module.css";
 import React, { useState } from "react";
 import CTAButton from "../../ui/CTAButton";
 import minusSvg from "../../../assets/images/icon-minus.svg";
+import cartSvg from '../../../assets/images/icon-cart.svg'
 import plusSvg from "../../../assets/images/icon-plus.svg";
 
 const ProductDetailForm: React.FC<{ productName: string,productPrice:number }> = (props) => {
@@ -11,10 +12,10 @@ const ProductDetailForm: React.FC<{ productName: string,productPrice:number }> =
     e.preventDefault();
     if(counter===0)return
     const porductChoosenData = {
-      name: props.productName,
-      amount: counter,
-      price:props.productPrice,
-      totalPrice:props.productPrice * counter
+      productName: props.productName,
+      productAmount: counter,
+      productPrice:props.productPrice,
+      productTotallPrice:props.productPrice * counter
       
     };
     console.log(porductChoosenData)
@@ -43,6 +44,7 @@ const ProductDetailForm: React.FC<{ productName: string,productPrice:number }> =
         />
       </div>
       <CTAButton type="submit" className={classes.submit}>
+        <img className={classes['cart-svg']} src={cartSvg} alt='cart'/>
         Add to cart
       </CTAButton>
     </form>

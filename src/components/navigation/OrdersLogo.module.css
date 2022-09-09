@@ -1,3 +1,23 @@
-.cart {
+.cart__container{
+    position: relative;
+}
+.cart__image {
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+
+}
+.cart__image:hover {
+  background-color: var(--primary2);
+}
+.cart__counter{
+    position: absolute;
+    padding: 0 .5rem;
     
+    border-radius: 50%;
+    right: 1rem;
+    font-weight: 700;
+    color: var(--gray5);
+    background-color: var(--primary1);
 }
