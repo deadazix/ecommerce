@@ -1,0 +1,36 @@
+.list {
+  gap: 1rem;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: var(--gray5);
+  right: 2rem;
+  left: 2rem;
+  top: 10rem;
+  z-index: 3;
+  padding: 4rem;
+  transition: 1s;
+
+  max-height: 30rem;
+  overflow: auto;
+  border-radius: 1rem;
+  
+}
+.list__line{
+    background-color: var(--gray2);
+    border: none;
+    height: 1px;
+}
+.list__unordered{
+    list-style: none;
+}
+.backdrop{
+    width: 100%;
+    height: 100vh;
+    background-color:var(--shadow-light);
+    
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}

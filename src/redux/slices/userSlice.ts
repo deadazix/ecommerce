@@ -1,6 +1,8 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-interface SingleCartFace {
+import { randomBytes } from "crypto";
+export interface SingleShopFace {
+  productId:number,
   productName: string;
   productAmount: number;
   productPrice: number;
@@ -10,14 +12,15 @@ interface UserFace {
   username: string;
   password: string;
   avatar: string;
-  cart: Array<SingleCartFace>;
+  shop: Array<SingleShopFace>;
 }
 const initialState: UserFace = {
   username: "admin1",
   password: "admin1Password",
   avatar: "admin1",
-  cart: [
+  shop: [
     {
+      productId:1,
       productName: "Full Limited Edition Sneakers",
       productAmount: 2,
       productPrice: 125,
@@ -29,7 +32,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    addToCart(state, action: PayloadAction<SingleCartFace>) {
+    addToCart(state, action: PayloadAction<SingleShopFace>) {
 
     },
   },

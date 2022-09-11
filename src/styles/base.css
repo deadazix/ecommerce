@@ -8,6 +8,7 @@
 :root {
   --primary1: hsl(26, 100%, 55%);
   --primary1-light:hsla(26, 100%, 55%, 0.236);
+  
   --primary2:hsl(25, 100%, 94%);
   --gray1:hsl(220, 13%, 13%);
   --gray2:hsl(219, 9%, 45%);
@@ -15,6 +16,8 @@
   --gray4:hsl(223, 64%, 98%);
   --gray5:hsl(0, 0%, 100%);
   --shadow:#000000be;
+  --shadow-light:#00000037;
+
   /* --font-family1:'sans'; */
   --font-weight1: 400;
   --font-weight2:700;
@@ -37,6 +40,35 @@ body {
   font-size: 1.6rem;
   color:var(--gray1)
 }
+.animateContainer{
+  position: absolute;
+}
 
+.shop-enter{
+  opacity: 0 ;
+}
+.shop-enter-active{
+  /* animation: opacityAnimate 4s forwards;
+   */
+   opacity: 1;
+   transition: .1s;
+}
+.shop-exit{
+  
+  opacity: 1;
+  transition: .1s;
+}
+.shop-exit-active {
+  opacity: 0;
+}
 
+@keyframes opacityAnimate {
 
+  0%{
+    opacity: 0 !important;
+  }
+  100%{
+    opacity: 1 !important;
+  }
+  
+}

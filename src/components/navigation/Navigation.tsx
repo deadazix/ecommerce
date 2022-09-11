@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import OrdersLogo from "./OrdersLogo";
+import OrdersLogo from "./shop/Shop";
 import Profile from "./Profile";
 import Hamber from "./Hamber";
 import Logo from "./Logo";
@@ -14,12 +14,10 @@ export type NavTransformStateType =
   | "u-transformX-negative-100";
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const cartData = useSelector((state:RootState)=>state.user.cart)
-  const [navTransformState, setNavTransformState] = useState<NavTransformStateType>(
-
-    "u-transformX-negative-100"
-  );
-// Changing NavState 
+  const cartData = useSelector((state: RootState) => state.user.shop);
+  const [navTransformState, setNavTransformState] =
+    useState<NavTransformStateType>("u-transformX-negative-100");
+  // Changing NavState
   const onNavStateHandler = (isOpen: boolean) => {
     setIsNavOpen(isOpen);
   };
@@ -36,11 +34,11 @@ const Navigation = () => {
         <Hamber onOpenNav={onNavStateHandler} />
         <Logo />
       </div>
-
       <div className={classes["navigation-container"]}>
         <OrdersLogo orderCount={cartData.length} />
         <Profile />
       </div>
+
       {/* MODAL */}
       <CSSTransition
         in={isNavOpen}

@@ -1,4 +1,9 @@
+.u-backdrop-light{
+  background-color: var(--shadow) !important;
+  opacity: .2;
+}
 .u-transformX-positive-0 {
+
   animation: transformX-positive-0-animation 0.4s forwards !important;
 }
 .u-transformX-negative-100 {
